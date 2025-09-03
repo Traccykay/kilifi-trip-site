@@ -280,3 +280,48 @@ footer .container {
 .card.btb .btn {
   margin-top: 40px; /* adjust until aligned */
 }
+
+/* ============================= */
+/* Mobile Menu Styles */
+/* ============================= */
+
+.navlinks {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button.nav-toggle {
+  display: none;
+  border: 0;
+  background: #ecfeff;
+  color: var(--teal-dark);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .navlinks {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 24px;
+    background: white;
+    position: absolute;
+    top: 60px; /* drops under header */
+    right: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .navlinks.open {
+    display: flex; /* show when toggled */
+  }
+
+  button.nav-toggle {
+    display: inline-block;
+  }
+}
+
